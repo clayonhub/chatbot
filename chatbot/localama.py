@@ -28,6 +28,6 @@ input_text=st.text_input("Search the topic u want")
 llm=Ollama(model="llama2")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
-
+#input text
 if input_text:
     st.write(chain.invoke({"question":input_text}))
